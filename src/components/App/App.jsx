@@ -44,8 +44,18 @@ const planeList = useSelector(store => store.planeList)
       <button type='submit' >Add Airline</button>
        </form>
       <table>{/* Airlines should be listed here */}
-      {planeList.map(item => <li key={item}>{item}</li>)}
-
+      <thead>
+      <tr>
+        <th>Airline</th>
+      </tr>
+    </thead>
+    <tbody>
+      {planeList.map(item => (
+        <tr key={item}>
+          <td>{item}</td>
+        </tr>
+      ))}
+    </tbody>
       </table>
      
     </div>
